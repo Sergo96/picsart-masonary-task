@@ -1,11 +1,10 @@
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useGetPhotosQuery } from '../../../../hooks';
-import { useItemsPerRow } from '../../hooks/useItemsRow/useItemsRow.ts';
+import { useGetPhotosQuery, useItemsPerRow } from '../../hooks';
 import { removeDuplicates } from '../../utils/removeDuplicates.ts';
 import { Spinner } from '../../../../components';
-import { Container, Grid, GridItem, Placeholder, Image } from './Masonry.styles.ts';
 import { generatePath, useNavigate, useSearchParams } from 'react-router-dom';
 import { mainRoutes } from '../../../../constants';
+import { Container, Grid, GridItem, Placeholder, Image } from './Masonry.styles';
 
 export const MasonryGrid: FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -109,7 +108,7 @@ export const MasonryGrid: FC = () => {
                100vw'
               alt={photo.alt || 'Photo'}
               onClick={() => {
-                navigate(generatePath(mainRoutes.photoDetailPage, { id: photo.id }));
+                navigate(generatePath<string>(mainRoutes.photoDetailPage, { id: photo.id }));
               }}
             />
           </GridItem>

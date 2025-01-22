@@ -1,4 +1,4 @@
-import { Photo } from '../../types/masonaryPhoto.types.ts';
+import { Photo } from '../../types';
 
 export type PexelsApiResponse = {
   total_results: number;
