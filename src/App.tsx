@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import { LoadingState } from './components';
-import { mainRoutes } from './constants';
+import { LoadingState } from './common/components';
+import { mainRoutes } from './common/constants';
 
 const Masonry = lazy(() => import('./modules/Masonry'));
 const PhotoDetails = lazy(() => import('./modules/PhotoDetails'));

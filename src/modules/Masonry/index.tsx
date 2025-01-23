@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { MasonryGrid } from './pages';
-import { MasonryLayout } from '../../layout';
-import { mainRoutes } from '../../constants';
+import { MasonryLayout } from '../../common/layout';
+import { mainRoutes } from '../../common/constants';
 
 const Masonry: FC = () => {
   return (

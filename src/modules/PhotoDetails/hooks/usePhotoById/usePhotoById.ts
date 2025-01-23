@@ -1,4 +1,4 @@
-import { Photo } from '../../../../types';
+import { Photo } from '../../../../common/types';
 import { fetchPhotoById } from '../../api/fetchPhotoById.ts';
 import { useQuery } from '@tanstack/react-query';
 

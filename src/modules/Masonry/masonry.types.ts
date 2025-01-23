@@ -1,4 +1,4 @@
-import { Photo } from '../../types';
+import { Photo } from '../../common/types';
 
 export type PexelsApiResponse = {
   total_results: number;

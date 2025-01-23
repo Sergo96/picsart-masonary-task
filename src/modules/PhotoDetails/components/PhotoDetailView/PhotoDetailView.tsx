@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Photo } from '../../../../types';
+import { Photo } from '../../../../common/types';
 import {
   Description,
   ImageWrapper,

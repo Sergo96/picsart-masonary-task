@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { usePhotoById } from '../../hooks';
-import { LoadingState } from '../../../../components';
+import { LoadingState } from '../../../../common/components';
 import { PhotoDetailView } from '../../components';
 
 export const PhotoDetailPage = () => {

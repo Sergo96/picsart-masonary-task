@@ -1,9 +1,9 @@
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useGetPhotosQuery, useItemsPerRow } from '../../hooks';
 import { removeDuplicates } from '../../utils/removeDuplicates.ts';
-import { Spinner } from '../../../../components';
+import { Spinner } from '../../../../common/components';
 import { generatePath, useNavigate, useSearchParams } from 'react-router-dom';
-import { mainRoutes } from '../../../../constants';
+import { mainRoutes } from '../../../../common/constants';
 import { Container, Grid, GridItem, Placeholder, Image } from './Masonry.styles';
 
 export const MasonryGrid: FC = () => {

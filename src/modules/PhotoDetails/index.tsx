@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import { MasonryLayout } from '../../layout';
+import { MasonryLayout } from '../../common/layout';
 import { PhotoDetailPage } from './pages';
-import { mainRoutes } from '../../constants';
+import { mainRoutes } from '../../common/constants';
 
 const PhotoDetails = () => {
   return (
