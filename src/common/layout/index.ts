@@ -1,1 +1,1 @@
-export { MasonryLayout } from './MasonryLayout/MasonryLayout.tsx';
+export { MasonryLayout } from './MasonryLayout/MasonryLayout';

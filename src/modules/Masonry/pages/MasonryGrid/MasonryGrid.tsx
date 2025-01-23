@@ -1,16 +1,17 @@
-import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { JSX, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useGetPhotosQuery, useItemsPerRow } from '../../hooks';
-import { removeDuplicates } from '../../utils/removeDuplicates.ts';
+import { removeDuplicates } from '../../utils/removeDuplicates/removeDuplicates';
 import { Spinner } from '../../../../common/components';
 import { generatePath, useNavigate, useSearchParams } from 'react-router-dom';
 import { mainRoutes } from '../../../../common/constants';
 import { Container, Grid, GridItem, Placeholder, Image } from './Masonry.styles';
+import { UseItemsPerRowParams } from '../../hooks/useItemsRow/useItemsRow';
 
-export const MasonryGrid: FC = () => {
+export const MasonryGrid: () => JSX.Element = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const previousScrollTopRef = useRef(0);
   const [searchParams] = useSearchParams();
-  const query = searchParams.get('search');
+  const query = searchParams.get('search') ?? '';
   const navigate = useNavigate();
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isFetching } = useGetPhotosQuery({
     query,
@@ -20,7 +21,7 @@ export const MasonryGrid: FC = () => {
   const itemWidth = 250;
   const itemPadding = 16;
 
-  const itemsPerRow = useItemsPerRow({ containerRef, itemPadding, itemWidth });
+  const itemsPerRow = useItemsPerRow({ containerRef, itemPadding, itemWidth } as UseItemsPerRowParams);
 
   const allPhotos = useMemo(() => data?.pages.flatMap((page) => page.photos) || [], [data]);
   const totalRows = Math.ceil(allPhotos.length / itemsPerRow); // Calculate total rows in the grid
@@ -99,7 +100,7 @@ export const MasonryGrid: FC = () => {
                 ${photo.src.small} 130w,
                 ${photo.src.medium} 350w,
                 ${photo.src.large} 650w,
-                ${photo.src.large2x} 940w
+                ${photo.src.large2x} 940w,
                 `}
               sizes='(max-width: 280px) 280px,
                (max-width: 130px) 130px,

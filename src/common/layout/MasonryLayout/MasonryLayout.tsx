@@ -1,4 +1,4 @@
-import Header, { HeaderProps } from '../Header/Header.tsx';
+import Header, { HeaderProps } from '../Header/Header';
 import { ChangeEvent, FC, PropsWithChildren, useEffect, useState } from 'react';
 import { useDebouncedValue } from '../../hooks';
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';

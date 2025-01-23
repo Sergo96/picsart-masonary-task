@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import { Photo } from '../../../../common/types';
 import {
   Description,
@@ -10,11 +9,11 @@ import {
   PhotoLink,
   Title,
   Image,
-} from './PhotoDetail.styles.ts';
+} from './PhotoDetail.styles';
 
 type PhotoDetailProps = Photo;
 
-export const PhotoDetailView: FC<PhotoDetailProps> = ({
+export const PhotoDetailView = ({
   width,
   height,
   url,
@@ -23,11 +22,17 @@ export const PhotoDetailView: FC<PhotoDetailProps> = ({
   src,
   liked,
   alt,
-}) => {
+}: PhotoDetailProps) => {
   return (
     <PhotoDetailViewContainer>
       <ImageWrapper>
-        <Image src={src.large2x} alt={alt} />
+        <Image
+          src={src.large} // Default image for browsers that don't support srcset
+          alt={alt}
+          srcSet={`${src.small} 500w, ${src.medium} 800w, ${src.large} 1200w, ${src.large2x} 2400w`}
+          sizes='(max-width: 600px) 500px, (max-width: 900px) 800px, 1200px' // Adjust sizes based on viewport width
+          loading='lazy' // Lazy load for better performance
+        />
       </ImageWrapper>
       <InfoWrapper>
         <Title>{alt}</Title>

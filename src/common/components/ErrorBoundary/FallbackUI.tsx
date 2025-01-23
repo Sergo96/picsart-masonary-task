@@ -1,6 +1,7 @@
-import { FallbackUIContainer, Heading, Message, RetryButton } from './FallbackUI.styles.ts';
+import { FallbackUIContainer, Heading, Message, RetryButton } from './FallbackUI.styles';
+import { JSX } from 'react';
 
-export const FallbackUI = () => {
+export const FallbackUI: () => JSX.Element = () => {
   const handleRetry = () => {
     window.location.reload();
   };

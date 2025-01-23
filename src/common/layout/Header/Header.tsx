@@ -1,5 +1,5 @@
 import { ChangeEvent, FC } from 'react';
-import { HeaderContainer, HeaderLeft, Icon } from './Header.styles.ts';
+import { HeaderContainer, HeaderLeft, Icon } from './Header.styles';
 import { BackButton, SearchInput } from '../../components';
 
 type HeaderType = 'search' | 'info';

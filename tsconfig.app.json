@@ -14,7 +14,7 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-
+    "composite": true,
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -23,5 +23,8 @@
     "noUncheckedSideEffectImports": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*",
+    "src/**/*.test.tsx"
+  ]
 }

@@ -13,7 +13,7 @@ export const SpinnerWrapper = styled.div<{ size: string; color: string }>`
   display: inline-block;
   width: ${({ size }) => size};
   height: ${({ size }) => size};
-  border: 4px solid ${({ theme }) => theme.colors.info};
+  border: 4px solid ${({ theme }) => theme.colors?.info};
   border-radius: 50%;
   border-top-color: transparent;
   animation: ${spin} 1s linear infinite;

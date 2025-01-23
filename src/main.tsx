@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
+import App from './App';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Reset, theme } from './common/theme/globalstyles.ts';
+import { Reset, theme } from './common/theme/globalstyles';
 import { ThemeProvider } from 'styled-components';
 import { ErrorBoundary, FallbackUI } from './common/components';
 

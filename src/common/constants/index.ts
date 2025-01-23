@@ -1,1 +1,1 @@
-export { mainRoutes } from './mainRoutes.ts';
+export { mainRoutes } from './mainRoutes';

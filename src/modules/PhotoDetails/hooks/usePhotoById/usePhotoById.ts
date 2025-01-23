@@ -1,5 +1,5 @@
 import { Photo } from '../../../../common/types';
-import { fetchPhotoById } from '../../api/fetchPhotoById.ts';
+import { fetchPhotoById } from '../../api/fetchPhotoById';
 import { useQuery } from '@tanstack/react-query';
 
 export const usePhotoById = (id: string) => {

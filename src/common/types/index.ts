@@ -1,1 +1,1 @@
-export type { Photo, PhotoSrc } from './masonaryPhoto.types.ts';
+export type { Photo, PhotoSrc } from './masonaryPhoto.types';

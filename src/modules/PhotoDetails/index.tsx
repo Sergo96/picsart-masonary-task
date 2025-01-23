@@ -2,8 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import { MasonryLayout } from '../../common/layout';
 import { PhotoDetailPage } from './pages';
 import { mainRoutes } from '../../common/constants';
+import { JSX } from 'react';
 
-const PhotoDetails = () => {
+const PhotoDetails: () => JSX.Element = () => {
   return (
     <Routes>
       <Route

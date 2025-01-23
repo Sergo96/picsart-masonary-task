@@ -1,8 +1,7 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, JSX, PropsWithChildren } from 'react';
 
 interface ErrorBoundaryProps {
-  fallback: ReactNode;
-  children: ReactNode;
+  fallback: JSX.Element;
 }
 
 interface ErrorBoundaryState {
@@ -11,7 +10,7 @@ interface ErrorBoundaryState {
   errorInfo: React.ErrorInfo | null;
 }
 
-export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+export class ErrorBoundary extends Component<PropsWithChildren<ErrorBoundaryProps>, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {

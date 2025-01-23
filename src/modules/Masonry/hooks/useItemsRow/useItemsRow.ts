@@ -1,11 +1,11 @@
 import { RefObject, useEffect, useState } from 'react';
 import debounce from 'lodash.debounce';
 
-interface UseItemsPerRowParams {
+export type UseItemsPerRowParams = {
   containerRef: RefObject<HTMLDivElement>;
   itemWidth: number;
   itemPadding: number;
-}
+};
 
 export const useItemsPerRow = ({ containerRef, itemWidth, itemPadding }: UseItemsPerRowParams): number => {
   const [itemsPerRow, setItemsPerRow] = useState(1);

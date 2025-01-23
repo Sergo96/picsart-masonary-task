@@ -1,4 +1,4 @@
-type ObjectWithKey = Record<string, any>;
+type ObjectWithKey = Record<string, unknown>;
 
 /**
  * Removes duplicate objects from an array based on a specified key.
