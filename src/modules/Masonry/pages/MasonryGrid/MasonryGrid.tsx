@@ -11,7 +11,7 @@ export const MasonryGrid: () => JSX.Element = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const previousScrollTopRef = useRef(0);
   const [searchParams] = useSearchParams();
-  const query = searchParams.get('search') ?? '';
+  const query = searchParams.get('search') || 'nature';
   const navigate = useNavigate();
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isFetching } = useGetPhotosQuery({
     query,
