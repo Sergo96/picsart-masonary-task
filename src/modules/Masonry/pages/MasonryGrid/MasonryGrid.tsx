@@ -108,6 +108,7 @@ export const MasonryGrid: () => JSX.Element = () => {
                (max-width: 650px) 650px,
                100vw'
               alt={photo.alt || 'Photo'}
+              loading='lazy'
               onClick={() => {
                 navigate(generatePath<string>(mainRoutes.photoDetailPage, { id: photo.id }));
               }}
