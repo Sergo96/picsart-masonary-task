@@ -4,7 +4,7 @@ export const PhotoDetailViewContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: ${({ theme }) => theme.spacing?.(4)};
+  margin: ${({ theme }) => theme.spacing?.(8)};
   background-color: ${({ theme }) => theme.colors?.neutralLight};
   padding: ${({ theme }) => theme.spacing?.(4)};
   border-radius: 8px;

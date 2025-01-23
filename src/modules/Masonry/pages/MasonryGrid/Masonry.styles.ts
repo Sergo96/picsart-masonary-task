@@ -5,6 +5,7 @@ export const Container = styled.div<{ $itemPadding: number }>`
   height: 100vh;
   padding: ${({ $itemPadding }) => `${$itemPadding / 2}px`};
   box-sizing: border-box;
+  margin-top: 70px;
 `;
 
 export const Placeholder = styled.div<{ $height: number }>`

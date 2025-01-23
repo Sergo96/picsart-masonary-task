@@ -2,11 +2,16 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.textPrimary};
   color: ${({ theme }) => theme.colors.light};
+  height: 40px;
+  z-index: 9999;
+  top: 0;
 `;
 
 export const HeaderLeft = styled.div`
