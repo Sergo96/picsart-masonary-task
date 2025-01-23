@@ -17,6 +17,8 @@ Install dependencies:
 bash
 yarn install
 
+run project: yarn dev
+
 Technologies:
 
 React: A JavaScript library for building user interfaces.
