@@ -18,6 +18,7 @@ bash
 yarn install
 
 run project: yarn dev
+build project: yarn run build
 
 Technologies:
 
